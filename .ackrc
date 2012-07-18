@@ -1,0 +1,8 @@
+--type-set=be=.java,.properties,.wsdl
+--type-set=jsp=.jsp,.jspf,.jspx,.jhtm,.jhtml,.tag
+--type-set=css=.css,.less,.scss,.sass,.styl
+--type-set=coffee=.coffee
+--type-set=js=.js,.coffee
+
+--ignore-dir=node_modules
+--ignore-dir=build

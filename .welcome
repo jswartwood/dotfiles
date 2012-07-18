@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# To hide the regular login chatter: `touch ~/.hushlogin`
+
+printf "
+          ${BWhite},d88b,                                     ${BWhite}.                   ${White}__..-
+          ${BWhite}888888                                        ${BWhite}.            ${White}.--${Blue}MWII:.
+          ${BWhite}\`?88P'         ${BWhite}.                       ${White}__                ,'${Blue}WWII::.
+                                               ${White}.${Blue}MW:${White}\`-.            /${Blue}WWII::..
+                                       ${BWhite}.    ${White}_.${Blue}MWII:'.${White} \`.     ${BWhite}.  ${White},'${Blue}WII::..
+                                        ${White}_.-${Blue}MWII::'.${White}     \`-.   ,'${Blue}WWI::.
+    ${BWhite}.                          ${White}_..vvvv,'${Blue}WWII::'${White}            \`.'${Blue}WII::.${White}
+                            ${White},-'${Blue}WI:'''${White}/${Blue}WII:'.${White}                 \\\\${Blue}WI:.
+${Cyan}------------------------${Cyan}--${White},'${Blue}WWI:'.${White}  /${Blue}WI:'.${White}          :.        \`.${Blue}I:.${White}
+${Cyan} ,          -.          ${BCyan},${White}'${Blue}WWI:'.${White}  ,'${Blue}I:.${White}              ::.        \\..
+${Cyan}     -          ~-~_~ _${BCyan}.${White}/${Blue}WI:'.${White}    /${Blue}WI:.${White}                ::.        \\.
+${Cyan}          ~-~-,-~' ~~~${BCyan}(${White}/${Blue}WWI:'.${White}__.-'${Blue}WI:.${White}____ _.${Blue}d88P${White}_____::::.        \\
+
+${BGreen}                                   Welcome, Action Jake
+"
