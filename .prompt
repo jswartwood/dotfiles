@@ -7,9 +7,9 @@ function relative_working_dir() {
 function build_prompt() {
 	RWD=$(relative_working_dir)
 	printf "${BBlue}[${BGreen} ${RWD} ${BBlue}]"
-	GIT_BRCH=
+	GIT_BRCH=$(git branch --no-color 2> /dev/null)
 
-	if [[ -n $(git branch 2> /dev/null) ]]; then
+	if [[ -n "$GIT_BRCH" ]]; then
 		GIT_BRCH=$(parse_git_branch)
 		GIT_DIRT=$(git_dirty_color)
 	fi
@@ -30,7 +30,7 @@ function git_dirty_color() {
 }
 
 function parse_git_branch() {
-	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1/"
+	echo "$GIT_BRCH" | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1/"
 }
 
 # Standard prompt as just blue arrow
