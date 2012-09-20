@@ -11,6 +11,7 @@ alias serv="python -m SimpleHTTPServer"
 export EDITOR="subl"
 alias v="mvim -v"
 alias e="subl"
+# alias e="choc"
 alias upsys="sudo softwareupdate -ia; brew update; brew upgrade; npm update -g; gem update"
 
 # Add tab completion for `defaults read|write NSGlobalDomain`
