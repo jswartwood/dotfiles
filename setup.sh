@@ -5,10 +5,10 @@
 brew install git subversion hg ack lynx phantomjs
 
 # Install languages
-brew install lua android-sdk node
+brew install lua android-sdk node haskell-platform erlang
 
 # Install DBs
-brew install couchdb mongodb redis
+brew install couchdb mongodb redis riak
 
 # Install NPM global fav tools
 npm install -g grunt nodemon weinre bower testacular
