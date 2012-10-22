@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export PATH=/usr/local/bin:${PATH}:/usr/local/share/npm/bin
+
 # Colorize the Terminal
 export CLICOLOR=1
 source $HOME/Dropbox/dotfiles/.color_vars
