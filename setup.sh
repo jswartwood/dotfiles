@@ -1,8 +1,12 @@
+#!/bin/bash
+
+# source ../.osx
+
 # Install Homebrew
-/usr/bin/ruby -e "$(/usr/bin/curl -fsSL https://raw.github.com/mxcl/homebrew/master/Library/Contributions/install_homebrew.rb)"
+ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
 
 # Install tools
-brew install git subversion hg ack lynx phantomjs
+brew install git hg ack lynx phantomjs
 
 # Install languages
 brew install lua android-sdk node haskell-platform erlang
@@ -22,4 +26,5 @@ npm install -g jitsu
 # Install Heroku cli
 gem install heroku foreman
 
-source ../.osx
+# Do SVN last; install typically hangs
+brew install subversion

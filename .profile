@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export PATH=/usr/local/bin:${PATH}:/usr/local/share/npm/bin
+export PATH=/usr/local/bin:/usr/local/sbin:${PATH}:/usr/local/share/npm/bin
 
 # Colorize the Terminal
 export CLICOLOR=1
