@@ -22,7 +22,7 @@ function build_prompt() {
 }
 
 function git_dirty_color() {
-	if [[ $(git status 2> /dev/null | tail -n1) != *"working directory clean"* ]]; then
+	if [[ -n $(git status -s 2> /dev/null) ]]; then
 		echo "$BRed"
 	else
 		echo "$BPurple"
