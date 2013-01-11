@@ -2,6 +2,9 @@
 set t_Co=256
 color Tomorrow-Night
 
+" Powerline config
+let g:Powerline_symbols = 'fancy'
+
 " Change mapleader
 let mapleader=","
 let g:mapleader=","
@@ -25,17 +28,18 @@ set clipboard=unnamed
 set autoread
 
 " Smart indentation
-set smarttab
 set autoindent
+set copyindent
 set smartindent
 
 " Set backspace config
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
+" Tabs as spaces
+set expandtab
 " Make tabs as wide as two spaces
-set tabstop=2
-set shiftwidth=2
+set tabstop=2 softtabstop=2 shiftwidth=2
 
 " Show matching block end
 set showmatch
