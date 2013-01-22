@@ -1,7 +1,3 @@
-[user]
-	name = Jacob Swartwood
-	email = jswartwood@gmail.com
-
 [credential]
 	helper = osxkeychain
 
@@ -17,6 +13,9 @@
 	# Detect whitespace errors when applying a patch
 	whitespace = fix
 
+[push]
+	default = simple
+
 [merge]
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
@@ -30,6 +29,7 @@
 
 [mergetool]
 	prompt = false
+	keepBackup = false
 
 [color]
 	# Use colors in Git commands that are capable of colored output when outputting to the terminal
@@ -57,6 +57,8 @@
 [alias]
 	# View the SHA, description, and history graph of the latest 20 commits
 	l = log --pretty=oneline --graph
+	# Log only entries I've created
+	logme = log --pretty=oneline --name-status --author=$USER
 	# View the current working tree status using the short format
 	s = status -s
 	# Show the diff between the latest commit and the current state
@@ -81,6 +83,13 @@
 	reb = "!r() { git rebase -i HEAD~$1; }; r"
 	# Undo a `git push`
 	undopush = push -f origin HEAD^:master
+
+[difftool "FileMerge"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+
+[mergetool "FileMerge"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
 
 [difftool "Kaleidoscope"]
 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
